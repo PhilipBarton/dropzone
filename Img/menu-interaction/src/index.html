@@ -1,0 +1,104 @@
+<!-- Main Header
+============================== -->	
+<header class="header-main">
+  <a class="header-main__logo">Dopest</a>
+  
+  <a class='header-main__menu js-menu-toggle'>
+   <div class='header-main__menu-bars'></div>
+  </a> 
+</header>  
+
+<section class="header-menu align--vcenter height--100">
+  <nav class="header-menu__nav">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Blog</a></li>
+    </ul>
+  </nav>
+</section>  
+
+<!-- Main
+============================== -->	
+<main role="main">
+
+<!-- Mast
+============================== -->	
+<section class="mast-page align--vcenter">
+  <div class="mast-page__content">
+    <h1>This A Header</h1>
+    <p>And this right here is a little intro paragraphy.</p>
+  </div>
+</section>
+
+ <section class="section--padding">
+	   <div class="row">
+
+     <p>Generally, if you have a container, and then you'd like to rock a full-width (viewport) image, some markup would be required to make it happen. You'd have to close the container, add your 100% image, then reopen the container.</p>
+        
+      <p>That's all well and good. But, this becomes a bit of an issue when creating blog post templates and layouts in CMS's like Wordpress. Sure, you can write some custom functions to wrap images with the required markup, then add another media upload option in the editor's toolbar, but honestly, it's a pain in the ass.</p>
+      
+        <h3>Hello Viewport Units</h3>  
+      <p>No worries playas. There's a better way. With viewport units, namely viewport width (vw), you create this full-width grid breaking pattern with a few lines of painless css.</p>
+
+    <h3>The Run Down</h3>
+
+    <p>SO let's say your container is 60% in width. That leaves 40%, or 20% on each side of the centered container. Now, just apply a width and max-width of 100vw  to your grid breaking element, with a margin-left of 20vw. Boom. We're done son! </p>
+        
+        <code class="code-block"><pre>
+/*-------------------------------------   
+--Row/Container
+---------------------------------------*/    
+.row{  
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  
+  @media (min-width: $mq-small) {
+    max-width:	80%;
+  }
+ 	@media (min-width: $mq-large) {
+   	max-width: 60%
+ 	}
+}
+/*-------------------------------------   
+--Grid Breaker
+---------------------------------------*/
+.gridbreak{
+  width: 100vw;
+  max-width: 100vw;
+  margin-left: -5vw;
+  @media (min-width: $mq-small) {
+    margin-left: -10vw;
+  }
+  @media (min-width: $mq-large) {
+    margin-left: -20vw;
+  }  
+}
+ </pre> </code>  
+        
+        
+    <p>No weird hacks, to overflows to cut. No custom functions in your CMS of choice. No custom Wordpress QTags bullshit. Just a nice grid-breaking full-width image. Just check these full-width mfers out right here ya'll:</p>
+    
+ 
+ 
+    <figure class="gridbreak"><img src="https://unsplash.it/2000/800?image=314"></figure>
+    
+    
+    <figure class="gridbreak"><img src="https://unsplash.it/2000/800?image=344"></figure>
+        
+        <p>Pretty dope right? I'm sayin. And it works nicely on Chrome, FF, and Safari. Haven't checked IE yet, but if VW is supported, you should be all good in the hood baby.</p>
+        
+        <h3>Media Query Hotness</h3>
+        <p>Of course, your container is gonna increase/decrease width as you resize. So, just make sure to use the same simple-ass maths at each breakpoint. Check the CSS tab if I'm not splain' it well.
+          
+        <h3>One more time baby</h3> 
+     <figure class="gridbreak"><img src="https://unsplash.it/2000/800?image=214"></figure>
+        
+        <p>A Little Thing by <a href="https://twitter.com/stephenscaff">Stephen Scaff</a></p>
+    </div>
+  </section>
+</main>
+
+

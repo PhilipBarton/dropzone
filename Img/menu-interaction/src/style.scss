@@ -1,0 +1,597 @@
+/* The version of Bourbon used in this Pen was 4.* */
+@import "bourbon";
+
+/*---------------------------------   
+--mixin for links
+-----------------------------------  */
+@mixin link-styles($mainColor: $color-darkgrey, $hoverColor: $color-alpha){
+ color: $mainColor;
+ text-decoration: none; 
+ line-height:inherit;
+ @include transition(color 0.4s ease-in-out);
+
+ &:hover, &:focus{
+  color: $hoverColor;
+  @include transition(color 0.4s ease-out-out);
+ }
+ &:active{
+  color: darken($hoverColor, 25);
+ }
+}
+
+/*-----------------------------   
+--Mixin for Overlays
+-------------------------------  */
+@mixin overlay($bgColor: #000, $bgOpacity: 0.6){
+ &:after{
+ content: '';
+ position: absolute;
+ top: 0;
+ left: 0;
+ height: 100%;
+ width: 100%;
+ background: rgba($bgColor, $bgOpacity);
+ z-index: 0;
+ @include transition(all 0.7s ease);
+ }
+ 
+ .row, .banner__content, .mast__content{
+  position: relative;
+  z-index: 2;
+ }
+}
+/*---------------------------------   
+--Config: Fonts
+-----------------------------------  */
+$font-header: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-paragraph: "Noto Serif", georgia, times, serif;
+$font-bigserif: "Playfair Display";
+/*---------------------------------   
+--COnfig: MQs
+-----------------------------------  */
+$mq-xsmall: 22em;
+$mq-small: 36em;
+$mq-med: 58em;
+$mq-large: 86em;
+$mq-xlarge: 115em;
+$mq-xxlarge: 125em;
+$mq-xxxlarge: 145em;
+
+/*---------------------------------   
+--Config: Types
+-----------------------------------  */
+$base-lineheight: 1.9;
+/*---------------------------------   
+--Config: Colors
+-----------------------------------  */
+$color-alpha:     #63F1E3;
+$color-beta:      #0c82a5;
+/*---------------------------------   
+-Setup
+-----------------------------------  */
+*, *:before, *:after {
+  -webkit-box-sizing: border-box; 
+  -moz-box-sizing: border-box; 
+  box-sizing: border-box; 
+}
+
+html {
+	font-size: 100%; 
+	overflow-y: scroll; 
+	overflow-x: hidden;
+	width: 100%;
+	-webkit-text-size-adjust: 100%;
+  background-color: #fff;  
+}
+/*---------------------------------   
+--Typography
+-----------------------------------  */
+body {
+  font-family: $font-paragraph;
+  color: #444;
+  position: relative;
+  width: 100%;
+  font-weight: 400;
+  font-style: normal;
+  line-height: $base-lineheight;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility; 
+  margin: 0;
+}
+
+/*---------------------------------   
+--Fluid body sizing
+-----------------------------------  */
+body {
+font-size: 100%;
+  
+  @media (min-width: $mq-small) {
+    font-size: 110%
+  }
+  @media (min-width: $mq-med) {
+    font-size: 120%
+  }
+  @media (min-width: $mq-large) {
+    font-size: 130%
+  }
+  @media (min-width: $mq-xlarge) {
+    font-size: 160%
+  }
+  @media (min-width: $mq-xxlarge) {
+    font-size: 170%
+  }
+  @media (min-width: $mq-xxxlarge) {
+    font-size: 180%
+  }
+}
+/*---------------------------------   
+--Images
+-----------------------------------  */
+img,object,embed{
+  max-width:100%;
+  height:auto
+}
+
+img{
+  -ms-interpolation-mode:bicubic;
+  border: 0;
+  max-width: 100%;
+  width: 100%;
+}
+figure{
+  margin: 1em 0;
+}
+.code-block{
+  font-size: 75%;
+  background-color: #eee;
+  display: block;
+  padding: 2em;
+  border-radius: 4px;
+  overflow-x: scroll;
+}
+
+/*---------------------------------   
+--Headers
+-----------------------------------  */
+h1,h2,h3,h4,h5,h6 {
+  margin: 0;
+  font-weight: 400;
+  display:block;
+  font-family: $font-header;
+  text-rendering: optimizeLegibility; 
+}
+/*---------------------------------   
+--h1 Theme
+-----------------------------------  */
+%font-h1{
+  $fontSize: 2.15em;
+  font-size: $fontSize - 0.15em; 
+  line-height: 1;
+  margin-bottom: 0.25em;
+
+ @media (min-width: $mq-med) {
+   font-size: $fontSize;  
+ }
+ @media (min-width: $mq-xlarge) {
+   font-size: $fontSize + 0.25em;
+ }  
+}
+/*---------------------------------   
+--h2 theme
+-----------------------------------  */
+%font-h2{
+ $fontSize: 1.75em; 
+ font-size: $fontSize;  
+ line-height: 1.35;
+ margin-bottom: 0.5em;
+
+ @media (min-width: $mq-xlarge) {
+   font-size: $fontSize + 0.25em;
+ }  
+}
+
+/*---------------------------------   
+--h3 Theme
+-----------------------------------  */
+%font-h3{
+  $fontSize:1.4em;
+ font-size: $fontSize;  
+ line-height: 1.35;
+ margin-bottom: 0.6em;
+
+ @media (min-width: $mq-xlarge) {
+   font-size: $fontSize + 0.25em;
+ }  
+}
+/*---------------------------------   
+--h4 Theme
+-----------------------------------  */
+%font-h4{
+ $fontSize:1.2em; 
+ font-size: $fontSize;  
+ line-height: 1.4;
+ margin-bottom: 0.5em;
+ font-weight: 400;
+
+ @media (min-width: $mq-xlarge) {
+   font-size: $fontSize + 0.25em;
+ }  
+}
+/*---------------------------------   
+--h5 theme
+-----------------------------------  */
+%font-h5{
+  $fontSize:1.1em;
+ font-size: $fontSize;  
+ line-height: 1.4;
+ margin-bottom: 0.4em;
+
+ @media (min-width: $mq-xlarge) {
+   //font-size: $fontSize + 0.25em;
+ }  
+}
+/*---------------------------------   
+--Headers Apply Theme
+-----------------------------------  */
+h1, .font-h1 {
+ @extend %font-h1;
+}
+
+h2, .font-h2 {
+ @extend %font-h2;
+}
+
+h3, .font-h3 {
+ @extend %font-h3;
+}
+
+h4, .font-h4 {
+ @extend %font-h4;
+}
+
+h5, .font-h5 {
+ @extend %font-h5;
+}
+/*--------------------------------   
+--Font Lead
+----------------------------------  */
+%font-lead,
+.font-lead{
+ font-size: 120%;
+ hyphens: none;
+ margin-bottom: 0.8em;
+ line-height: 1.6;
+ @media (min-width: $mq-med) {
+   font-size: 135%;
+ }
+}
+/*---------------------------------   
+--typography
+-----------------------------------  */
+p {
+  margin-top: 0;
+  margin-bottom: 1.3em;
+}
+small {
+  font-size: .77em;
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+}
+/*--------------------------------   
+--Links
+----------------------------------  */
+a {
+  @include link-styles($color-alpha, lighten($color-alpha, 15));
+}
+/*--------------------------------   
+--Selection
+----------------------------------  */
+*::selection {
+  background: $color-beta;
+  color: white;
+}
+/*---------------------------------   
+--Layout: Row/container
+-----------------------------------  */
+.row{  
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  
+  @media (min-width: $mq-small) {
+    max-width:	80%;
+  }
+ 	@media (min-width: $mq-large) {
+   	max-width: 60%
+ 	}
+}
+/*---------------------------------   
+--Layout: Positoning
+-----------------------------------  */
+.align--vcenter,.align--top,.align--bottom{
+  @include display(flex);
+  @include justify-content(center);
+}
+.align--vcenter {
+  @include align-items(center);
+}
+.align--vtop {
+  @include align-items(flex-start);
+}
+.align--vbottom {
+  @include align-items(flex-end);
+}
+
+/*---------------------------------   
+--Height modifier
+-----------------------------------  */
+.height--100{
+  height: 100vh;
+}
+
+/*---------------------------------   
+--Header
+-----------------------------------  */
+.header-main{
+  position: fixed;
+  z-index: 98;
+  top: 0;
+  left: 0;
+  right: 1em;
+  width: 100%;
+  
+  &__logo{
+    position: absolute;
+    left: 1em;
+    top: 0.5em;
+    color: #fff;
+    font-family: $font-header;
+  }
+  &__menu{
+    position:absolute;
+    right: 1em;
+    top: 0.5em;
+  }
+}
+/*-------------------------------   
+--Mobile Nav: Menu Bars
+----------------------------------  */
+.header-main__menu-bars {
+ width:2rem;
+ height: 1px;
+ margin: 0.75em 0;
+ background: #fff;
+ position: relative;
+  z-index: 99;
+ @include transition (top 0.3s ease-in-out);
+ 
+   &:before {
+     top: -8px; 
+   }
+   &:after {
+     top: 8px; 
+   }
+   &:after, &:before {
+     content: '';
+     display: block;
+     width: 2rem;
+     height: 1px;
+     background: #fff;
+     position: absolute;
+     z-index: -1;
+     @include transition (all 0.3s ease-in-out); 
+   }
+  &:hover{
+    cursor:pointer;
+  }
+ } 
+
+
+/*---------------------------------   
+--Header-menu -offcanvas
+-----------------------------------  */
+.header-menu{
+  //background-color: #000;
+  position:fixed;
+  z-index: 91;
+  top: 0;
+  left: 0;
+  width: 100%;
+  @include transform(translateX(-100%));
+  @include transition(transform 0s 0.7s cubic-bezier(.77,0,.175,1));
+  
+  &__nav{
+    position: relative;
+    z-index: 99;
+   
+    li{
+      opacity: 0;
+      @include transform(translateY(3rem));
+     @include transition(opacity 0.6s ease, transform 4s ease);
+    }
+  }
+  
+  &:before, &:after{
+    content: '';
+    //background-color: #000;
+    position:fixed;
+    z-index: 92;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  &:before{
+    background: #111;
+    width: 200%;
+    @include transform(translateX(200%));
+    @include transition(all 1s cubic-bezier(.77,0,.175,1));
+  }
+  &:after{
+    background: #111;
+     @include transition(all 0 0.1s cubic-bezier(.77,0,.175,1));
+     @include transform(translateX(-100%));
+  }
+  
+  nav ul li{
+    list-style:none;
+    font-family:$font-header;
+    //text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.5em 1.5em;
+    position: relative;
+    text-align:center;
+    a{
+      font-family: $font-bigserif;
+      font-size: 6vmin;
+      position: relative;
+      overflow:hidden;
+      display:inline-block;
+      padding: 0 0.25em;
+      @include link-styles(#fff, $color-alpha);
+      
+    }
+    a:after{
+      content: "";
+      position: absolute;
+      height: 2px;
+      //width: 0;
+      background-color: $color-alpha;
+      left: 0;
+      right: 0;
+      top: 60%;
+      margin: 0 auto;
+      @include transform(translateX(-100%));
+      @include transition(all .6s ease);
+    }
+    
+    a:hover:after{
+      width: 100%;
+      @include transform(translateX(0));
+      @include transition(transform 0.6s ease);
+    }
+    
+  }
+}
+/*----------------------------------   
+--JS-Nav-Open: Menu Bars Animate
+-----------------------------------  */
+.js-menu--is-open {
+  
+  /*--Menu-bars--*/
+  .header-main__menu-bars {
+   background: none !important; 
+  
+    &:after, &:before {
+      top: 0 !important;
+      background: #fff !important;
+      zoom: 1;
+    }
+    &:after{
+      @include transform(rotate(45deg));
+    }
+    &:before {
+      @include transform(rotate(-45deg));
+   }
+  }
+  
+  /*-- is--open header-menu --*/
+  .header-menu{
+    @include transform(translateX(0));
+    @include transition(all 0.69s cubic-bezier(.77,0,.175,1));
+    
+    &__nav li{
+      opacity: 1;
+      @include transform(translateY(0));
+      @include transition(all 0.6s 0.25s ease);
+      
+      &:nth-of-type(1n){
+         @include transition-delay(0.6s);
+      }
+      &:nth-of-type(2n){
+         @include transition-delay(0.7s);
+      }
+      &:nth-of-type(3n){
+         @include transition-delay(0.8s);
+      }
+      &:nth-of-type(4n){
+         @include transition-delay(0.9s);
+      }
+    }
+    &:before{  
+      //transform-origin: right 100%;
+      @include transform(translateX(0));
+      @include transition(all 0.6s 0.6s cubic-bezier(.77,0,.175,1));
+    }
+    &:after{  
+      @include transform(translateX(0));
+      @include transition(all 0.6s cubic-bezier(.77,0,.175,1));
+    }
+  }
+}
+/*---------------------------------   
+--Sections
+-----------------------------------  */
+.section--padding {
+  padding: 2em 0;
+
+  @media (min-width: $mq-med) {
+    padding: 4em 0;
+  }
+}
+
+/*---------------------------------   
+--overlay
+-----------------------------------  */
+.mast--overlay, %has--overlay {
+ position: relative;
+
+ &:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.7);
+ }
+}
+
+%mast--bg{
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+
+/*---------------------------------   
+--Masthead
+-----------------------------------  */
+.mast-page{
+  height: 80vh;
+  background-image: url(https://unsplash.it/1800/900?image=683);
+  @extend %mast--bg;
+  
+  &__content{
+    text-align:center;
+    h1{
+      font-weight: 700;
+      font-size: 14vmin;
+      color: #fff;
+      text-shadow: 0px 8px 10px rgba(0,0,0,0.25)
+    }
+    p{
+      color: #fff;
+    }
+  }
+}
+
+

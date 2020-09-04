@@ -1,0 +1,681 @@
+/*---------------------------------   
+--mixin for links
+-----------------------------------  */
+/*-----------------------------   
+--Mixin for Overlays
+-------------------------------  */
+/*---------------------------------   
+--Config: Fonts
+-----------------------------------  */
+/*---------------------------------   
+--COnfig: MQs
+-----------------------------------  */
+/*---------------------------------   
+--Config: Types
+-----------------------------------  */
+/*---------------------------------   
+--Config: Colors
+-----------------------------------  */
+/*---------------------------------   
+-Setup
+-----------------------------------  */
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  width: 100%;
+  -webkit-text-size-adjust: 100%;
+  background-color: #fff;
+}
+
+/*---------------------------------   
+--Typography
+-----------------------------------  */
+body {
+  font-family: "Noto Serif", georgia, times, serif;
+  color: #444;
+  position: relative;
+  width: 100%;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.9;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  margin: 0;
+}
+
+/*---------------------------------   
+--Fluid body sizing
+-----------------------------------  */
+body {
+  font-size: 100%;
+}
+@media (min-width: 36em) {
+  body {
+    font-size: 110%;
+  }
+}
+@media (min-width: 58em) {
+  body {
+    font-size: 120%;
+  }
+}
+@media (min-width: 86em) {
+  body {
+    font-size: 130%;
+  }
+}
+@media (min-width: 115em) {
+  body {
+    font-size: 160%;
+  }
+}
+@media (min-width: 125em) {
+  body {
+    font-size: 170%;
+  }
+}
+@media (min-width: 145em) {
+  body {
+    font-size: 180%;
+  }
+}
+
+/*---------------------------------   
+--Images
+-----------------------------------  */
+img, object, embed {
+  max-width: 100%;
+  height: auto;
+}
+
+img {
+  -ms-interpolation-mode: bicubic;
+  border: 0;
+  max-width: 100%;
+  width: 100%;
+}
+
+figure {
+  margin: 1em 0;
+}
+
+.code-block {
+  font-size: 75%;
+  background-color: #eee;
+  display: block;
+  padding: 2em;
+  border-radius: 4px;
+  overflow-x: scroll;
+}
+
+/*---------------------------------   
+--Headers
+-----------------------------------  */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: 400;
+  display: block;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+/*---------------------------------   
+--h1 Theme
+-----------------------------------  */
+h1, .font-h1 {
+  font-size: 2em;
+  line-height: 1;
+  margin-bottom: 0.25em;
+}
+@media (min-width: 58em) {
+  h1, .font-h1 {
+    font-size: 2.15em;
+  }
+}
+@media (min-width: 115em) {
+  h1, .font-h1 {
+    font-size: 2.4em;
+  }
+}
+
+/*---------------------------------   
+--h2 theme
+-----------------------------------  */
+h2, .font-h2 {
+  font-size: 1.75em;
+  line-height: 1.35;
+  margin-bottom: 0.5em;
+}
+@media (min-width: 115em) {
+  h2, .font-h2 {
+    font-size: 2em;
+  }
+}
+
+/*---------------------------------   
+--h3 Theme
+-----------------------------------  */
+h3, .font-h3 {
+  font-size: 1.4em;
+  line-height: 1.35;
+  margin-bottom: 0.6em;
+}
+@media (min-width: 115em) {
+  h3, .font-h3 {
+    font-size: 1.65em;
+  }
+}
+
+/*---------------------------------   
+--h4 Theme
+-----------------------------------  */
+h4, .font-h4 {
+  font-size: 1.2em;
+  line-height: 1.4;
+  margin-bottom: 0.5em;
+  font-weight: 400;
+}
+@media (min-width: 115em) {
+  h4, .font-h4 {
+    font-size: 1.45em;
+  }
+}
+
+/*---------------------------------   
+--h5 theme
+-----------------------------------  */
+h5, .font-h5 {
+  font-size: 1.1em;
+  line-height: 1.4;
+  margin-bottom: 0.4em;
+}
+
+/*---------------------------------   
+--Headers Apply Theme
+-----------------------------------  */
+/*--------------------------------   
+--Font Lead
+----------------------------------  */
+.font-lead {
+  font-size: 120%;
+  hyphens: none;
+  margin-bottom: 0.8em;
+  line-height: 1.6;
+}
+@media (min-width: 58em) {
+  .font-lead {
+    font-size: 135%;
+  }
+}
+
+/*---------------------------------   
+--typography
+-----------------------------------  */
+p {
+  margin-top: 0;
+  margin-bottom: 1.3em;
+}
+
+small {
+  font-size: .77em;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/*--------------------------------   
+--Links
+----------------------------------  */
+a {
+  color: #63F1E3;
+  text-decoration: none;
+  line-height: inherit;
+  -webkit-transition: color 0.4s ease-in-out;
+  -moz-transition: color 0.4s ease-in-out;
+  transition: color 0.4s ease-in-out;
+}
+a:hover, a:focus {
+  color: #a9f7f0;
+  -webkit-transition: color 0.4s ease-out-out;
+  -moz-transition: color 0.4s ease-out-out;
+  transition: color 0.4s ease-out-out;
+}
+a:active {
+  color: #34eddb;
+}
+
+/*--------------------------------   
+--Selection
+----------------------------------  */
+*::selection {
+  background: #0c82a5;
+  color: white;
+}
+
+/*---------------------------------   
+--Layout: Row/container
+-----------------------------------  */
+.row {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 36em) {
+  .row {
+    max-width: 80%;
+  }
+}
+@media (min-width: 86em) {
+  .row {
+    max-width: 60%;
+  }
+}
+
+/*---------------------------------   
+--Layout: Positoning
+-----------------------------------  */
+.align--vcenter, .align--top, .align--bottom {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  box-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+}
+
+.align--vcenter {
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  box-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -ms-flex-align: center;
+}
+
+.align--vtop {
+  -webkit-box-align: start;
+  -moz-box-align: start;
+  box-align: start;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  -o-align-items: flex-start;
+  align-items: flex-start;
+  -ms-flex-align: start;
+}
+
+.align--vbottom {
+  -webkit-box-align: end;
+  -moz-box-align: end;
+  box-align: end;
+  -webkit-align-items: flex-end;
+  -moz-align-items: flex-end;
+  -ms-align-items: flex-end;
+  -o-align-items: flex-end;
+  align-items: flex-end;
+  -ms-flex-align: end;
+}
+
+/*---------------------------------   
+--Height modifier
+-----------------------------------  */
+.height--100 {
+  height: 100vh;
+}
+
+/*---------------------------------   
+--Header
+-----------------------------------  */
+.header-main {
+  position: fixed;
+  z-index: 98;
+  top: 0;
+  left: 0;
+  right: 1em;
+  width: 100%;
+}
+.header-main__logo {
+  position: absolute;
+  left: 1em;
+  top: 0.5em;
+  color: #fff;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.header-main__menu {
+  position: absolute;
+  right: 1em;
+  top: 0.5em;
+}
+
+/*-------------------------------   
+--Mobile Nav: Menu Bars
+----------------------------------  */
+.header-main__menu-bars {
+  width: 2rem;
+  height: 1px;
+  margin: 0.75em 0;
+  background: #fff;
+  position: relative;
+  z-index: 99;
+  -webkit-transition: top 0.3s ease-in-out;
+  -moz-transition: top 0.3s ease-in-out;
+  transition: top 0.3s ease-in-out;
+}
+.header-main__menu-bars:before {
+  top: -8px;
+}
+.header-main__menu-bars:after {
+  top: 8px;
+}
+.header-main__menu-bars:after, .header-main__menu-bars:before {
+  content: '';
+  display: block;
+  width: 2rem;
+  height: 1px;
+  background: #fff;
+  position: absolute;
+  z-index: -1;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.header-main__menu-bars:hover {
+  cursor: pointer;
+}
+
+/*---------------------------------   
+--Header-menu -offcanvas
+-----------------------------------  */
+.header-menu {
+  position: fixed;
+  z-index: 91;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  -o-transform: translateX(-100%);
+  transform: translateX(-100%);
+  -webkit-transition: -webkit-transform 0s 0.7s cubic-bezier(0.77, 0, 0.175, 1);
+  -moz-transition: -moz-transform 0s 0.7s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: transform 0s 0.7s cubic-bezier(0.77, 0, 0.175, 1);
+}
+.header-menu__nav {
+  position: relative;
+  z-index: 99;
+}
+.header-menu__nav li {
+  opacity: 0;
+  -webkit-transform: translateY(3rem);
+  -moz-transform: translateY(3rem);
+  -ms-transform: translateY(3rem);
+  -o-transform: translateY(3rem);
+  transform: translateY(3rem);
+  -webkit-transition: opacity 0.6s ease, -webkit-transform 4s ease;
+  -moz-transition: opacity 0.6s ease, -moz-transform 4s ease;
+  transition: opacity 0.6s ease, transform 4s ease;
+}
+.header-menu:before, .header-menu:after {
+  content: '';
+  position: fixed;
+  z-index: 92;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.header-menu:before {
+  background: #111;
+  width: 200%;
+  -webkit-transform: translateX(200%);
+  -moz-transform: translateX(200%);
+  -ms-transform: translateX(200%);
+  -o-transform: translateX(200%);
+  transform: translateX(200%);
+  -webkit-transition: all 1s cubic-bezier(0.77, 0, 0.175, 1);
+  -moz-transition: all 1s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 1s cubic-bezier(0.77, 0, 0.175, 1);
+}
+.header-menu:after {
+  background: #111;
+  -webkit-transition: all 0 0.1s cubic-bezier(0.77, 0, 0.175, 1);
+  -moz-transition: all 0 0.1s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 0 0.1s cubic-bezier(0.77, 0, 0.175, 1);
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  -o-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+.header-menu nav ul li {
+  list-style: none;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  letter-spacing: 0.05em;
+  padding: 0.5em 1.5em;
+  position: relative;
+  text-align: center;
+}
+.header-menu nav ul li a {
+  font-family: "Playfair Display";
+  font-size: 6vmin;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  padding: 0 0.25em;
+  color: #fff;
+  text-decoration: none;
+  line-height: inherit;
+  -webkit-transition: color 0.4s ease-in-out;
+  -moz-transition: color 0.4s ease-in-out;
+  transition: color 0.4s ease-in-out;
+}
+.header-menu nav ul li a:hover, .header-menu nav ul li a:focus {
+  color: #63F1E3;
+  -webkit-transition: color 0.4s ease-out-out;
+  -moz-transition: color 0.4s ease-out-out;
+  transition: color 0.4s ease-out-out;
+}
+.header-menu nav ul li a:active {
+  color: #12c3b2;
+}
+.header-menu nav ul li a:after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  background-color: #63F1E3;
+  left: 0;
+  right: 0;
+  top: 60%;
+  margin: 0 auto;
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  -o-transform: translateX(-100%);
+  transform: translateX(-100%);
+  -webkit-transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+.header-menu nav ul li a:hover:after {
+  width: 100%;
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
+  -webkit-transition: -webkit-transform 0.6s ease;
+  -moz-transition: -moz-transform 0.6s ease;
+  transition: transform 0.6s ease;
+}
+
+/*----------------------------------   
+--JS-Nav-Open: Menu Bars Animate
+-----------------------------------  */
+.js-menu--is-open {
+  /*--Menu-bars--*/
+  /*-- is--open header-menu --*/
+}
+.js-menu--is-open .header-main__menu-bars {
+  background: none !important;
+}
+.js-menu--is-open .header-main__menu-bars:after, .js-menu--is-open .header-main__menu-bars:before {
+  top: 0 !important;
+  background: #fff !important;
+  zoom: 1;
+}
+.js-menu--is-open .header-main__menu-bars:after {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.js-menu--is-open .header-main__menu-bars:before {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.js-menu--is-open .header-menu {
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
+  -webkit-transition: all 0.69s cubic-bezier(0.77, 0, 0.175, 1);
+  -moz-transition: all 0.69s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 0.69s cubic-bezier(0.77, 0, 0.175, 1);
+}
+.js-menu--is-open .header-menu__nav li {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+  -webkit-transition: all 0.6s 0.25s ease;
+  -moz-transition: all 0.6s 0.25s ease;
+  transition: all 0.6s 0.25s ease;
+}
+.js-menu--is-open .header-menu__nav li:nth-of-type(1n) {
+  -webkit-transition-delay: 0.6s;
+  -moz-transition-delay: 0.6s;
+  transition-delay: 0.6s;
+}
+.js-menu--is-open .header-menu__nav li:nth-of-type(2n) {
+  -webkit-transition-delay: 0.7s;
+  -moz-transition-delay: 0.7s;
+  transition-delay: 0.7s;
+}
+.js-menu--is-open .header-menu__nav li:nth-of-type(3n) {
+  -webkit-transition-delay: 0.8s;
+  -moz-transition-delay: 0.8s;
+  transition-delay: 0.8s;
+}
+.js-menu--is-open .header-menu__nav li:nth-of-type(4n) {
+  -webkit-transition-delay: 0.9s;
+  -moz-transition-delay: 0.9s;
+  transition-delay: 0.9s;
+}
+.js-menu--is-open .header-menu:before {
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
+  -webkit-transition: all 0.6s 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+  -moz-transition: all 0.6s 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 0.6s 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+}
+.js-menu--is-open .header-menu:after {
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
+  -webkit-transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+  -moz-transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+/*---------------------------------   
+--Sections
+-----------------------------------  */
+.section--padding {
+  padding: 2em 0;
+}
+@media (min-width: 58em) {
+  .section--padding {
+    padding: 4em 0;
+  }
+}
+
+/*---------------------------------   
+--overlay
+-----------------------------------  */
+.mast--overlay {
+  position: relative;
+}
+.mast--overlay:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.mast-page {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/*---------------------------------   
+--Masthead
+-----------------------------------  */
+.mast-page {
+  height: 80vh;
+  background-image: url(https://unsplash.it/1800/900?image=683);
+}
+.mast-page__content {
+  text-align: center;
+}
+.mast-page__content h1 {
+  font-weight: 700;
+  font-size: 14vmin;
+  color: #fff;
+  text-shadow: 0px 8px 10px rgba(0, 0, 0, 0.25);
+}
+.mast-page__content p {
+  color: #fff;
+}

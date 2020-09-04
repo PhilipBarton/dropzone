@@ -1,0 +1,548 @@
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description"
+  content="The very first personal shipping and receiving station made smart and secure for your home and lifestyle convenience.">
+  <meta name="keywords" content="Mail, Smart, Drop, Zone, america, canada,DropZone">
+  <meta name="author" content="Philip Barton">
+
+  <!--logo-->
+  <link rel="apple-touch-icon" sizes="180x180" href="./Img/favicon_package_v0.16/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./Img/favicon_package_v0.16/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./Img/favicon_package_v0.16/favicon-16x16.png">
+  <link rel="manifest" href="./Img/favicon_package_v0.16/site.webmanifest">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+
+  <!--fonts-->
+  <link rel="stylesheet" href="./css/fontawesome.min.css">
+  <link rel="stylesheet" href="./css/all.min.css">
+
+
+
+  <!--customcss-->
+ 
+  <link rel="stylesheet" href="./css/newsletter.css">
+  <link rel="stylesheet" href="./css/mobile.css">
+  <link rel="stylesheet" href="./css/style.css">
+
+  <title>DropZone</title>
+
+</head>
+
+
+
+<body  class=" bg-color" data-target="#navbar-link">
+
+<!--nav-->
+<div id="navbar-example">
+  <nav class="navbar nav navbar-expand-lg navbar-default " id="mainNav">
+      <a class="navbar-brand" href="#">DropZone</a>
+      <button class="navbar-toggler" type="button" onclick="opennav()"data-trigger="#main_nav">
+        <i class="fas fa-bars navbar-toggler-icon"></i>
+      </button>
+      <div class="navbar-collapse " id="main_nav">
+        <div class="offcanvas-header mt-3">  
+          <button class="btn-close float-right"> &times </button>
+          <h5 class="py-2 text-white">DropZone</h5>
+        </div>
+        <ul class="navbar-nav  justify-content-end" role="tablist">
+          <li class="nav-item "> 
+              <span class="line">
+                  <a class="nav-link js-scroll-trigger navtext" href="./Index.html">Home </a>
+              </span>  
+          </li>
+          <li class="nav-item active">
+              <span class="line">
+                  <a class="nav-link js-scroll-trigger navtext" href="./preorder.html">Reserve Yours</a>
+              </span>
+          </li>
+          <li class="nav-item">
+              <span class="line">
+              <a class="nav-link js-scroll-trigger navtext" href="./contact.html"> Contact Us</a> 
+              </span>
+          </li>
+          <li class="nav-item">
+            <a href="https://www.facebook.com/thedropzone.co/" class="nav-link js-scroll-trigger navtext">
+              <i class="fab fa-facebook"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="https://www.instagram.com/thedropzone.co/" class="nav-link js-scroll-trigger navtext">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="https://twitter.com/ThedropzoneC" class="nav-link js-scroll-trigger navtext">
+          <i class="fab fa-twitter"></i>
+          </a>
+      </li>
+      <li class="nav-item">
+        <a href="https://www.linkedin.com/company/thedropzone/" class="nav-link js-scroll-trigger navtext">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+        </ul>
+      </div> <!-- navbar-collapse.// -->
+    </nav> 
+  </div>
+
+  
+
+
+
+ 
+
+  <!--header-->
+  <header id="masthead" class="masthead">
+
+
+    <div class="container d-flex h-100 align-items-center ">
+      <div class="mx-auto text-center">
+        <img class=" logo " src="./Img/LogoMakr-1NBdDR-300dpi.jpeg">
+        <h2 class="uk-heading uk-text-center"><span></span></h2>
+        <a class="btn repbutton btn-primary js-scroll-trigger yellowboxshadow" href="#whoweare">Get to know us</a>
+        <a class="btn repbutton btn-primary js-scroll-trigger yellowboxshadow" href="#popup1">Join Our Newsletter</a>
+      </div>
+
+    </div>
+    <div id="popup1" class="overlay">
+      <div class="popup"> <a class="close" href="#">&times;</a>
+        <div id="dialog" class="window">
+
+          <div class="box">
+            <div class="newletter-title">
+              <h2>Get all the updates on the &amp; most advanced mailbox</h2>
+            </div>
+            <div class="box-content newleter-content">
+              <label>Subscribe to our newsletters now and stay up-to-date with new information and exciting developments</label>
+              <div id="frm_subscribe">
+                <form name="subscribe" id="subscribe_popup">
+                  <div>
+                    <!-- <span class="required">*</span><span>Email</span>-->
+                    <input type="text" value="" name="subscribe_pemail" id="subscribe_pemail">
+                    <input type="hidden" value="" name="subscribe_pname" id="subscribe_pname">
+                    <div id="notification"></div>
+                    <a class="btn btn-primary js-scroll-trigger yellowboxshadow" onclick="email_subscribepopup()"><span>Submit</span></a>
+                  </div>
+                </form>
+                <div class="subscribe-bottom">
+                  <input type="checkbox" id="newsletter_popup_dont_show_again">
+                  <label for="newsletter_popup_dont_show_again">Don't show this popup again</label>
+                </div>
+              </div>
+              <!-- /#frm_subscribe -->
+            </div>
+            <!-- /.box-content -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+
+  <!--whoweare?-->
+  <div data-aos="fade-down">
+    <section class="about-section text-center" id="whoweare">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto uk-grid-small ">
+            <div class="centerobject">
+            <h2 class="text-white mb-4 align-middle boldtitle">Who are we?</h2>
+            <p class="text-white align-middle pfont">
+              The very first personal shipping and receiving station made smart and secure for your home and lifestyle
+              convenience.
+            </p>
+          </div>
+          </div>
+        </div>
+        <a class="btn btn-primary  js-scroll-trigger yellowboxshadow" href="#Whattoexpect">What To Expect</a>
+      </div>
+    </section>
+  </div>
+
+
+
+
+  <!--whattoexpect-->
+  <section id="Whattoexpect" class="projects-section">
+    <!--stars-->
+
+
+    <!--sections-->
+    <div class="container">
+      <!--title-->
+      <h1 class="text-white text-center"><span>What To Expect</span></h1>
+      <div class="row">
+        <div class="col ">
+          <span class="line backgroundwhite ">
+            <h4  class="text-white text-center p-69  d-flex p-5"> <a class="text-white ahover" href="#smartintegraton">Smart Integration</a></h4>
+        </span>
+      </div>
+      <div class="col ">
+        <span class="line backgroundwhite">
+          <h4  class="text-white text-center p-69  d-flex p-5"> <a class="text-white ahover" href="#convenience">Convenience</a></h4>
+        </span>
+      </div>
+      <div class="col ">
+        <span class="line backgroundwhite">
+          <h4  class="text-white text-center p-69 d-flex p-5 "> <a class="text-white ahover" href="#aesthetic">Aesthetic</a></h4>
+        </span>
+      </div>
+      </div>
+
+      </div>
+    
+
+  </section>
+
+  <section id="smartintegraton">
+     <!--smartintergration-->
+  
+     <div class="row ">
+      <div class="col-lg-6 smartintegrationimg">
+      </div>
+
+      <!--details-->
+      <div class="col-lg-6 ">
+        <div class="bg-black text-center h-100 project">
+          <div class="d-flex h-100">
+            <div class="project-text w-100 my-auto text-center text-lg-left white-border">
+              <h4 class="text-black boldtitle">Smart Integration</h4>
+              <p class="mb-0 text-black pfont">Control mailbox access and logistics data at any time.
+
+                Integrates into smart home technology, so you can finally say "Hey! Get the mail!."</p>
+
+              
+           
+           
+           
+          </div>
+        </div>
+      
+    </div>
+  </div>
+  <div class=" arrow-animate-down">
+    <h2 class="text-right"><a href="#convenience"><i class="fas fa-arrow-down display-4  "></i></a></h2>
+  </div>
+  </section>
+
+  <section id="convenience">
+     <!--convenience-->
+     <div class="row  ">
+       <!--image-->
+      <div class="col-lg-6 conveinceimg ">
+      </div>
+      <!--details-->
+      <div class="col-lg-6 ">
+        <div class="bg-black text-center h-100 project">
+          <div class="d-flex h-100">
+            <div class="project-text w-100 my-auto text-center text-lg-left white-border">
+              <h4 class=" text-black boldtitle">Convenience</h4>
+              <p class="mb-0 text-black  pfont">See what's in your mailbox anytime, from any place via the DropZone
+                App.
+
+                No need to schedule around delivery times</p>
+              
+              
+                
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class=" arrow-animate-down">
+        <h2 class="text-right"><a href="#convenience"><i class="fas fa-arrow-down display-4  "></i></a></h2>
+      </div>
+   </div>
+  </section>
+
+  <section id="aesthetic">
+     <!--aesthetics-->
+     <div class="row ">
+      <!--title-->
+      <div class="col asteticimg">
+       
+      </div>
+      <!--details-->
+      <div class="col-lg-6 ">
+        <div class="bg-black text-center h-100 project">
+          <div class="d-flex h-100">
+            <div class="project-text w-100 my-auto text-center text-lg-left white-border">
+        
+              <h4 class="text-black boldtitle">Aesthetics</h4>
+              <p class="mb-0 text-black pfont">Creatively designed and intuitively engineered</p>
+        
+              <hr class="bottombutton">
+                <p>Want To Know Why We Are Doing This?</p>
+                <a class="btn btn-primary js-scroll-trigger yellowboxshadow" href="#whywearehere">Why We Are Here?</a>
+             
+            
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+<br>
+<br>
+
+  <!--whywearehere-->
+ 
+    <section id="whywearehere" class="projects-section">
+        <!--section title-->
+        <h1 class="text-white text-center"><span>Why we are here?</span></h1>
+        <div class="row align-items-start text-center">
+          <div class="col">
+            <span class="line backgroundwhite">
+              <a class="ahover" href="#challengingold">
+              <h4 class="text-white padssssssssss  d-flex">Challenging The Old</h4>
+            </a>
+              </span>
+          </div>
+          <div class="col">
+            <span class="line backgroundwhite">
+              <a class="ahover" href="#integratenew">
+              <h4 class="text-white padssssssssss  d-flex">Integrating The New</h4>
+            </a>
+              </span>
+          </div>
+        </div>
+    </section>
+  
+
+
+<section class="challengingold" id="challengingold">
+       <!--challengingtheoldopening-->
+       <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+        <div class="col-lg-6 challengingoldimg">
+          </div>
+        <div class="col-lg-6 ">
+          <div class="bg-black text-center h-100 project">
+            <div class="d-flex h-100">
+              <div class="project-text w-100 my-auto text-center text-lg-left white-border">
+                <h4 class="text-black boldtitle">Challenging The Old</h4>
+                <p class="mb-0 text-black pfont">Mailboxes haven't undergone any transformations since the day it was
+                  first designed on march 9, 1858 and we are here to challenge this notion.</p>
+
+              </div>
+              <h2 class="text-right"><a href="#integratenew"><i class="fas fa-arrow-down display-4 arrow-animate-down "></i></a></h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--challengingtheoldcloseing-->
+</section>
+
+<section class="integratenew" id="integratenew">
+    <!--integratingthenewopening-->
+    <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+      <div class="col-lg-6 ">
+        <div class="bg-black text-center h-100 project">
+          <div class="d-flex h-100">
+            <div class="project-text w-100 my-auto text-center text-lg-left white-border">
+              <h4 class="text-black boldtitle">Integrating The New</h4>
+              <p class="mb-0 text-black pfont">Making the world ready and equiped for the coming revolution of the
+                shipping industry.</p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6"><img class="img-fluid " src="./Img/Integrate-New.jpg"
+          alt=""></div>
+    </div>
+    <!--integrating the new closing-->
+</section>
+
+
+  <!-- Footer -->
+  <footer class="page-footer font-small indigo">
+
+    <!-- Footer Links -->
+    <div class="container-fluid text-center text-md-left">
+
+      <!-- Grid row -->
+      <div class="row">
+
+        <!-- Grid column -->
+        <div class="col-md-3 mx-auto">
+
+          <!-- Links -->
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Our Social Media</h5>
+
+          <ul class="list-group list-group-flush">
+            <li>
+              <a href="https://www.linkedin.com/company/thedropzone/">Linkedin</a>
+            </li>
+            <li>
+              <a href="https://twitter.com/ThedropzoneC">Twitter</a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/thedropzone.co/">Instagram</a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/thedropzone.co/">Facebook</a>
+            </li>
+          </ul>
+
+        </div>
+        <!-- Grid column -->
+
+        <hr class="clearfix w-100 d-md-none">
+
+        <!-- Grid column -->
+        <div class="col-md-3 mx-auto">
+
+          <!-- Links -->
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Site Index</h5>
+
+          <ul class="list-group list-group-flush">
+            <li>
+              <a href="./Index.html">Home</a>
+            </li>
+            <li>
+              <a href="./preorder.html">Reserve Yours</a>
+            </li>
+            <li>
+              <a href="./contact.html">Contact</a>
+            </li>
+          </ul>
+
+        </div>
+        <!-- Grid column -->
+
+        <hr class="clearfix w-100 d-md-none">
+
+        <!-- Grid column -->
+        <div class="col-md-3 mx-auto">
+
+          <!-- Links -->
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Sign Up For Our Newsletter</h5>
+
+          <ul class="list-group list-group-flush">
+            <li>
+              <a href="#popup1">Sign Up Here </a>
+            </li>
+            
+          </ul>
+
+        </div>
+        <!-- Grid column -->
+
+        <hr class="clearfix w-100 d-md-none">
+
+        <!-- Grid column -->
+        <div class="col-md-3 mx-auto">
+
+          <!-- Links -->
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Legal</h5>
+
+          <ul class="list-group list-group-flush">
+            <li>
+              <a href="#!">Privacy Policy</a>
+            </li>
+            <li>
+              <a href="#!">Terms & Conditions</a>
+            </li>
+            <li>
+              <a href="#!">Accessibility</a>
+            </li>
+          </ul>
+
+        </div>
+        <!-- Grid column -->
+
+      </div>
+      <!-- Grid row -->
+
+    </div>
+    <!-- Footer Links -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2020 Copyright:
+      <a href="https://mdbootstrap.com/"> DropZone</a>
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+  <!-- Footer -->
+
+
+
+
+
+
+
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/js/all.min.js"></script>
+  <script src="https://use.fontawesome.com/5cd2758afa.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+    <script src="./js/uikit.min.js"></script>
+    <script src="./JS/uikit-icons.js"></script>
+
+  <script>
+    AOS.init();
+  </script>
+   <script type="text/javascript">
+    /// some script
+    $(function () {
+        'use strict'
+    
+      $("[data-trigger]").on("click", function(){
+            var trigger_id =  $(this).attr('data-trigger');
+            $(trigger_id).toggleClass("show ");
+            $('body').toggleClass("offcanvas-active");
+        });
+    
+        // close if press ESC button 
+        $(document).on('keydown', function(event) {
+            if(event.keyCode === 27) {
+               $(".navbar-collapse").removeClass("show");
+               $("body").removeClass("overlay-active");
+            }
+        });
+    
+        // close button 
+        $(".btn-close").click(function(e){
+            $(".navbar-collapse").removeClass("show");
+            $("body").removeClass("offcanvas-active");
+        }); 
+    
+    
+    })
+    </script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script>
+$(function() {
+    var header = $(".scrollnav");
+    $(window).scroll(function() {    
+        var scroll = $(window).scrollTop();
+    
+        if (scroll >= 10) {
+          $(".navbar-collapse").removeClass("show");
+            $("body").removeClass("offcanvas-active");
+        } 
+    });
+});
+</script>
+
+    
+
+</body>
+
+
+</html>
